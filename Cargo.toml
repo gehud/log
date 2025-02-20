@@ -19,6 +19,9 @@ edition = "2021"
 [package.metadata.docs.rs]
 features = ["std", "serde", "kv_std", "kv_sval", "kv_serde"]
 
+[lib]
+crate-type = ["rlib", "dylib"]
+
 [[test]]
 name = "integration"
 path = "tests/integration.rs"
@@ -30,6 +33,8 @@ path = "tests/macros.rs"
 harness = true
 
 [features]
+default = ["std"]
+
 max_level_off   = []
 max_level_error = []
 max_level_warn  = []

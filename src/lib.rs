@@ -346,7 +346,6 @@
 )]
 #![warn(missing_docs)]
 #![deny(missing_debug_implementations, unconditional_recursion)]
-#![cfg_attr(all(not(feature = "std"), not(test)), no_std)]
 
 #[cfg(any(
     all(feature = "max_level_off", feature = "max_level_error"),
